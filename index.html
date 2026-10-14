@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ayesha Elaine T. Baldovino | Student Portfolio</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- External CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- NAVIGATION BAR -->
+  <nav class="navbar">
+    <div class="container nav-container">
+      <a href="#home" class="brand-logo">
+        <span>&lt;</span>LYNX<span>/&gt;</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#works" class="nav-link">Works</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HOME / HERO SECTION -->
+  <section id="home" class="hero">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <span class="badge">Student Portfolio</span>
+        <span class="hero-greeting">Hello, I'm</span>
+        <h1 class="hero-name">Ayesha Baldovino</h1>
+        
+        <!-- PROFILE SUMMARY CARD -->
+        <div class="hero-details-card">
+          <div class="detail-item">
+            <span class="detail-label">Course & Section</span>
+            <span class="detail-value">BSCS - 3rd Year</span>
+          </div>
+          <div class="detail-item">
+            <span class="detail-label">Institution</span>
+            <span class="detail-value">Cavite State University - Silang Campus</span>
+          </div>
+        </div>
+
+        <p class="hero-description">
+          This portfolio was designed and created for <strong>educational purposes</strong> to showcase my academic journey, course requirements, activities, and personal growth in Computer Science.
+        </p>
+
+        <div class="hero-cta">
+          <a href="#works" class="btn btn-primary">
+            View My Works
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </a>
+          <a href="#about" class="btn btn-outline">About Me</a>
+        </div>
+      </div>
+
+      <!-- VISUAL MONOGRAM AVATAR -->
+      <div class="hero-visual">
+        <div class="avatar-wrapper">
+          <div class="avatar-inner">
+            LYNX
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT SECTION -->
+  <section id="about" class="section about">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge">Get To Know Me</span>
+        <h2 class="section-title">About Myself</h2>
+      </div>
+
+      <div class="about-grid">
+        <!-- Introduction -->
+        <div class="about-card">
+          <h3 class="about-card-title">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+            Introduction
+          </h3>
+          <div class="about-text">
+            <p>
+              Hi! I am <strong>Ayesha Baldovino</strong>, a passionate Computer Science student dedicated to mastering web design, and software development.
+            </p>
+            <p>
+              Through this academic portfolio, I document my progress, and compile course requirements. I am always eager to learn new technologies and continuously refine my technical expertise.
+            </p>
+          </div>
+        </div>
+
+        <!-- Academic Info -->
+        <div class="about-card">
+          <h3 class="about-card-title">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
+            Academic Overview
+          </h3>
+          <div class="info-list">
+            <div class="info-box">
+              <div class="info-box-label">Full Name</div>
+              <div class="info-box-value">Ayesha Baldovino</div>
+            </div>
+            <div class="info-box">
+              <div class="info-box-label">Program</div>
+              <div class="info-box-value">BS Computer Science</div>
+            </div>
+            <div class="info-box">
+              <div class="info-box-label">Campus</div>
+              <div class="info-box-value">CvSU - Silang</div>
+            </div>
+            <div class="info-box">
+              <div class="info-box-label">Purpose</div>
+              <div class="info-box-value">Academic Portfolio</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--FIREBASE CLOUD STORAGE-->
+  <section id="works" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge">Academic Archive</span>
+        <h2 class="section-title">My Works</h2>
+      </div>
+
+      <!-- CATEGORY TABS -->
+      <div class="works-tabs">
+        <button class="tab-btn active" onclick="switchTab(event, 'activities')">Activities</button>
+        <button class="tab-btn" onclick="switchTab(event, 'quizzes')">Quizzes</button>
+        <button class="tab-btn" onclick="switchTab(event, 'exams')">Exams</button>
+        <button class="tab-btn" onclick="switchTab(event, 'projects')">Projects</button>
+      </div>
+
+      <!-- ACTIVITIES PANEL -->
+      <div id="panel-activities" class="works-panel active">
+        <div class="upload-dropzone" id="dropzone-activities" onclick="triggerFileInput('activities')">
+          <div class="empty-icon-box">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line></svg>
+          </div>
+          <h3 class="empty-title">Cloud Upload Activities</h3>
+          <p class="empty-subtitle">Select files or drag & drop to sync lab exercises directly to Firebase Cloud.</p>
+          <span class="upload-hint">Syncs Across All Devices • PDF, Images, Code, Docs</span>
+          <input type="file" id="file-activities" class="file-input" onchange="uploadToFirebase(event, 'activities')" multiple>
+        </div>
+        <div id="list-activities" class="uploaded-items-grid"></div>
+      </div>
+
+      <!-- QUIZZES PANEL -->
+      <div id="panel-quizzes" class="works-panel">
+        <div class="upload-dropzone" id="dropzone-quizzes" onclick="triggerFileInput('quizzes')">
+          <div class="empty-icon-box">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line></svg>
+          </div>
+          <h3 class="empty-title">Cloud Upload Quizzes</h3>
+          <p class="empty-subtitle">Select files or drag & drop to sync quiz records directly to Firebase Cloud.</p>
+          <span class="upload-hint">Syncs Across All Devices • PDF, Images, Docs</span>
+          <input type="file" id="file-quizzes" class="file-input" onchange="uploadToFirebase(event, 'quizzes')" multiple>
+        </div>
+        <div id="list-quizzes" class="uploaded-items-grid"></div>
+      </div>
+
+      <!-- EXAMS PANEL -->
+      <div id="panel-exams" class="works-panel">
+        <div class="upload-dropzone" id="dropzone-exams" onclick="triggerFileInput('exams')">
+          <div class="empty-icon-box">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line></svg>
+          </div>
+          <h3 class="empty-title">Cloud Upload Exams</h3>
+          <p class="empty-subtitle">Select files or drag & drop to sync exam outputs directly to Firebase Cloud.</p>
+          <span class="upload-hint">Syncs Across All Devices • PDF, Images, Docs</span>
+          <input type="file" id="file-exams" class="file-input" onchange="uploadToFirebase(event, 'exams')" multiple>
+        </div>
+        <div id="list-exams" class="uploaded-items-grid"></div>
+      </div>
+
+      <!-- PROJECTS PANEL -->
+      <div id="panel-projects" class="works-panel">
+        <div class="upload-dropzone" id="dropzone-projects" onclick="triggerFileInput('projects')">
+          <div class="empty-icon-box">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line></svg>
+          </div>
+          <h3 class="empty-title">Cloud Upload Projects</h3>
+          <p class="empty-subtitle">Select files or drag & drop to sync project documentations directly to Firebase Cloud.</p>
+          <span class="upload-hint">Syncs Across All Devices • ZIP, PDF, Images, Code</span>
+          <input type="file" id="file-projects" class="file-input" onchange="uploadToFirebase(event, 'projects')" multiple>
+        </div>
+        <div id="list-projects" class="uploaded-items-grid"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-brand">Ayesha Elaine T. Baldovino</div>
+      <p class="footer-text">Cavite State University - Silang Campus • Computer Science Department</p>
+      <p style="font-size: 0.8rem; color: var(--text-dim);">Created for Educational Purposes</p>
+    </div>
+  </footer>
+
+  <!-- NOTIFICATION TOAST -->
+  <div id="toast" class="status-toast">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+    <span id="toast-message">Files uploaded successfully to Cloud!</span>
+  </div>
+
+  <!--Firebase Modular-->
+  <script type="module" src="script.js"></script>
+</body>
+</html>
